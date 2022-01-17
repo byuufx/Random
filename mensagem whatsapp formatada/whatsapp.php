@@ -22,9 +22,8 @@ function Whatsapp(string $numero = '', string $titulo = '', array $texto = []){
   foreach($texto as $key => $value){
     $text .= "*$key :* $value $nl";
   }
-  
-  $link = "https://wa.me/$numero?text=$text";
-  return $link;
+
+  return "https://wa.me/$numero?text=$text";
 }
 
 
