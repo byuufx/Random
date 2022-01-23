@@ -7,9 +7,10 @@
  * @param  string $numero  número no padrão DDD do país + DDD região + número
  * @param  string $titulo  título
  * @param  array $texto  array para montar a mensagem 
- * @return string O link com a mensagem formatada.
+ * @return bool|string O link com a mensagem formatada, false se houver erro
  */
-function Whatsapp(string $numero = '', string $titulo = '', array $texto = []){
+function Whatsapp(string $numero = '', string $titulo = '', array $texto = []): bool|string
+{
 
   if(empty($numero) || empty($titulo) || empty($texto)){
     return false;
